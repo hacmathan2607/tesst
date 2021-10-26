@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run settting file
         run: |
-          sudo curl ipecho.net/plain; echo
+          
           sudo apt-get update
           sudo apt-get install xfce4 xfce4-terminal
           sudo apt install xrdp
@@ -17,6 +17,6 @@ jobs:
           sudo apt install openssh-server
           sudo systemctl status ssh
           sudo ufw allow ssh
-          
+          sudo curl ipecho.net/plain; echo
       - name: Ubuntu ready to go 
         run: sleep 1d
