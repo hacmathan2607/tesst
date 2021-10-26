@@ -14,5 +14,9 @@ jobs:
           sudo apt-get install xfce4 xfce4-terminal
           sudo apt install xrdp
           sudo adduser xrdp ssl-cert
+          sudo apt install openssh-server
+          sudo systemctl status ssh
+          sudo ufw allow ssh
+          
       - name: Ubuntu ready to go 
         run: sleep 1d
