@@ -1,0 +1,18 @@
+name: Ubuntu 18.04
+
+on: 
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run settting file
+        run: |
+          sudo curl ipecho.net/plain; echo
+          sudo apt-get update
+          sudo apt-get install xfce4 xfce4-terminal
+          sudo apt install xrdp
+          sudo adduser xrdp ssl-cert
+      - name: Ubuntu ready to go 
+        run: sleep 1d
